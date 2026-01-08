@@ -3,10 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Police Recruitment Portal - Login</title>
+    <style>
+        /* CSS - Styling the Page */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+        }
+
+        .login-container {
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .login-container h2 {
+            margin-bottom: 25px;
+            color: #333;
+            font-size: 24px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+            position: relative;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #666;
+            font-weight: 600;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .input-group input:focus {
+            border-color: #1e3c72;
+        }
+
+        .toggle-password {
+            position: absolute;
+            right: 15px;
+            top: 38px;
+            cursor: pointer;
+            color: #666;
+            user-select: none;
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 12px;
+            background: #1e3c72;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn-login:hover {
+            background: #2a5298;
+        }
+
+        .footer-links {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .footer-links a {
+            color: #1e3c72;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-    <h1?> this is login page
-    </h1>
+
+    <div class="login-container">
+        <h2>Recruitment Login</h2>
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="username">Registration Number</label>
+                <input type="text" id="username" placeholder="Enter Registration ID" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter Password" required>
+                <span class="toggle-password" onclick="togglePass()">👁️</span>
+            </div>
+
+            <button type="submit" class="btn-login">Login</button>
+        </form>
+
+        <div class="footer-links">
+            <p>Forgot Password? <a href="#">Click here</a></p>
+            <p>New User? <a href="#">Register Now</a></p>
+        </div>
+    </div>
+
+    <script>
+        /* JavaScript - Functional Logic */
+        
+        // Toggle Password Visibility
+        function togglePass() {
+            const passInput = document.getElementById('password');
+            const type = passInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passInput.setAttribute('type', type);
+        }
+
+        // Form Submission Handler
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const regNum = document.getElementById('username').value;
+            alert('Login attempted for Registration: ' + regNum + '\n\nNote: This is a front-end demo only.');
+        });
+    </script>
+
 </body>
 </html>
