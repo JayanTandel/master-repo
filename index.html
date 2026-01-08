@@ -3,11 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Velvet & Vanilla | Artisan Cakes</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-<titlebar>
-    <h1>this is index page</h1>
-</titlebar>
+
+    <nav class="navbar">
+        <div class="logo">V&V</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Cakes</a></li>
+            <li><a href="#about">Our Story</a></li>
+            <li><button class="btn-contact">Order Now</button></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <span class="subtitle">Freshly Baked Daily</span>
+            <h1>Baking Moments of <br><em>Pure Happiness</em></h1>
+            <p>Experience the art of premium artisanal cakes delivered to your doorstep.</p>
+            <a href="#menu" class="btn-primary">Explore Menu</a>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=1000" alt="Beautiful Cake">
+        </div>
+    </section>
+
+    <section id="menu" class="products">
+        <h2 class="section-title">Trending This Season</h2>
+        <div class="product-grid">
+            <div class="cake-card">
+                <div class="cake-img">
+                    <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&q=80&w=500" alt="Strawberry Bliss">
+                </div>
+                <h3>Strawberry Bliss</h3>
+                <p>$45.00</p>
+                <button class="add-to-cart">Add to Box</button>
+            </div>
+            <div class="cake-card">
+                <div class="cake-img">
+                    <img src="https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?auto=format&fit=crop&q=80&w=500" alt="Dark Truffle">
+                </div>
+                <h3>Dark Truffle Luxe</h3>
+                <p>$52.00</p>
+                <button class="add-to-cart">Add to Box</button>
+            </div>
+            <div class="cake-card">
+                <div class="cake-img">
+                    <img src="https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&q=80&w=500" alt="Velvet Rose">
+                </div>
+                <h3>Velvet Rose</h3>
+                <p>$48.00</p>
+                <button class="add-to-cart">Add to Box</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
